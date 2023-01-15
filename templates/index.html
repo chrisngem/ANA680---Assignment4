@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iris</title>
+</head>
+<body>
+    <form action="{{ url_for('predict')}}" method="POST">
+        Cell Thickness:  <input type="number" name="thickness"><br>
+        Cell Size:   <input type="number" name="size"><br>
+        Cell Shape:  <input type="number" name="shape"><br>
+        Adhesion:   <input type="number" name="adhesion"><br>
+      
+        <input type=submit    value=Submit>
+   </form>
+    My prediction: {{ predict }}
+</body>
+</html>
