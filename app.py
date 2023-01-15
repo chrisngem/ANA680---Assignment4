@@ -18,7 +18,7 @@ def predict():
     Shape = request.form['Shape']
     Adhesion = request.form['Adhesion']
     pred = model.predict(np.array([[Thickness,Size,Shape,Adhesion]]))
-    #print(pred)
+    print(pred)
     return render_template('index.html', predict=str(pred))
 if __name__ == '__main__':
     app.run
